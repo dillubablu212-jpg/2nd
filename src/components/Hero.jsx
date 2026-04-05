@@ -33,7 +33,17 @@ const Hero = () => {
         </div>
         <div className="hero-image-col">
           <div className="avatar-wrapper">
-            <div className="avatar-placeholder glass-panel">
+            {/* Note: Drop your photo named "profile.jpg" inside the "public" folder */}
+            <img 
+              src="/profile.jpeg" 
+              alt="Sanjana" 
+              className="avatar-image glass-panel" 
+              onError={(e) => { 
+                e.target.style.display = 'none'; 
+                e.target.nextSibling.style.display = 'flex'; 
+              }} 
+            />
+            <div className="avatar-placeholder glass-panel" style={{display: 'none'}}>
                <span>SG</span>
             </div>
             <div className="glow-circle"></div>
